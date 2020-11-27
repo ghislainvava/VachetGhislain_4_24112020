@@ -14,7 +14,44 @@ a:hover {
 }
 
 header{
-    background-color: #FFFFFF;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-contact{
+    margin-left: 50px;
+}
+
+.nave{
+    display: flex;
+    list-style: none;
+}
+.nave li{
+    margin-right: 30px;   
+}
+
+.nave li a{  
+    color: #333333;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+#toggle img{
+    height: 40px;
+}
+
+#citation{
+    margin: 50px 20px 10px 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.pdg{
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .bloc {
