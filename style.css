@@ -7,7 +7,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.hors-ecran {
+    position: absolute;
+    left: -99999rem;
+ }
+ 
 a:hover {
     text-decoration: none;
     cursor: pointer;
@@ -103,15 +107,11 @@ header{
 
 .texture-paper::before {
     background: url("img/texture-paper.png");
-    background-size: 280px 280px;
+    background-size: 100px 100px;
 }
 
 .d-bloc {
     color: rgba(255, 255, 255, .7);
-}
-
-.d-bloc button:hover {
-    color: rgba(255, 255, 255, .9);
 }
 
 .voffset {
@@ -123,15 +123,13 @@ header{
     margin-left: 0;
 }
 
+
 .row.row-no-gutters > [class^="col-"],
 .row.row-no-gutters > [class*=" col-"] {
     padding-right: 0;
     padding-left: 0;
 }
 
-#bloc-1-hero h1 {
-    font-size: 32px;
-}
 
 .navbar {
     margin-bottom: 0;
@@ -319,7 +317,7 @@ a[data-lightbox]:hover img {
 
 .cta-hero {
     margin-top: 22px;
-    color: #FFFFFF;
+    color: black;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
@@ -354,6 +352,7 @@ h1, h4 {
 
 p {
     font-size: 14px;
+    line-height: 1.5em; /*espacement minimal*/
 }
 
 .med-width-whitespace {
@@ -385,6 +384,9 @@ p {
     background-color: rgba(165, 147, 99, 0.7);
     padding: 40px ;
 }
+    
+
+
 
 .bold-link {
     font-weight: 900;
@@ -400,13 +402,13 @@ p {
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background:#F3976C;
     
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956;
-    color: #FFFFFF;
+.btn-atomic-tangerin {
+    background: #F3976C;
+    color: black;
 }
 
 .ltc-white {
@@ -478,46 +480,15 @@ footer div ul li {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    . {
-        background-attachment: scroll;
-    }
-}
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media (max-width: 991px) {
-    .container {
-        width: 100%;
-    }
-    .b-parallax {
-        background-attachment: scroll;
-    }
-    .body,
-    #hero-bloc {
-        overflow-x: hidden;
-        position: relative;
-    }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
-    .bloc-group,
-    .bloc-group .bloc {
-        display: block;
-        width: 100%;
-    }
-    .bloc-fill-screen .fil-top-edge,
-    .bloc-fill-screen .fil-bottom-edge {
-        padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
-}
+
 
 @media (max-width: 767px) {
     .body{

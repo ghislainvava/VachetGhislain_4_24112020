@@ -1406,7 +1406,7 @@ textarea {
 }
 
 a {
-    color: #337ab7;
+    color: black;
     text-decoration: none
 }
 
@@ -4202,7 +4202,7 @@ fieldset[disabled] .btn-link:hover {
 .btn-lg {
     padding: 10px 16px;
     font-size: 18px;
-    line-height: 1.3333333;
+    line-height: 1.5;
     border-radius: 6px
 }
 
