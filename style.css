@@ -1,4 +1,65 @@
 
+@font-face {
+    font-family: et-line;
+    src: url(fonts/et-line.eot);
+    src: url(fonts/et-line.eot?#iefix) format('embedded-opentype'), url(fonts/et-line.woff) format('woff'), url(fonts/et-line.ttf) format('truetype'), url(fonts/et-line.svg#et-line) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+.hg {
+    height: 100px;
+    width: 100px;
+}
+
+.et-icon-browser,
+.et-icon-edit,
+.et-icon-presentation
+ {
+    font-family: et-line;
+    line-height: 1;
+    display: inline-block;
+}
+
+.et-icon-browser:before {
+    content: "\e00c"
+}
+.et-icon-presentation:before {
+    content: "\e00e"
+}
+.et-icon-edit:before {
+    content: "\e01c"
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),  url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+   
+}
+
+.fa {
+    font:  30px/1 FontAwesome;
+    color: black;
+}
+
+.fa-3x {
+    font-size: 3em
+}
+
+.fa-instagram:before {
+    content: "\f16d"
+}
+
+.fa-dribbble:before {
+    content: "\f17d"
+}
+.fa-twitter:before {
+    content: "\f099"
+}
+.fa-facebook:before {
+    content: "\f09a"
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,10 +72,15 @@ body {
     position: absolute;
     left: -99999rem;
  }
- 
+
 a:hover {
     text-decoration: none;
     cursor: pointer;
+}
+
+a img{
+    width: 270px;
+    height: 270px;
 }
 
 header{
@@ -24,6 +90,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header img {
+    width: 386px;
+    height: 72px;
 }
 .header-contact{
     margin-left: 50px;
@@ -43,8 +114,9 @@ header{
     text-decoration: none;
 }
 
-#toggle img{
-    height: 40px;
+img{
+    height: 72px;
+    width: 72px;
 }
 
 #citation{
@@ -68,7 +140,11 @@ header{
 }
 
 .bloc-lg {
-    padding: 100px 50px;
+    padding: 100px auto;
+}
+.bloc-gd {
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .bloc-md {
@@ -79,16 +155,15 @@ header{
     padding: 20px 50px;
 }
 
-.bg-center,
-.bg-repeat {
+.bg-center{
     -webkit-background-size: auto;
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
 }
 
-.bg-repeat {
-    background: repeat;
+.bloc-mgtop{
+    margin: 100px auto;
 }
 
 .bg-t-edge {
@@ -114,9 +189,6 @@ header{
     color: rgba(255, 255, 255, .7);
 }
 
-.voffset {
-    margin-top: 30px;
-}
 
 .row-no-gutters {
     margin-right: 0;
@@ -134,6 +206,14 @@ header{
 .navbar {
     margin-bottom: 0;
     z-index: 1;
+}
+
+#width-btn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-brand {
@@ -240,7 +320,9 @@ button {
 
 
 .icon-md {
-    font-size: 30px;
+    
+    font-size: inherit;
+    font-size: 50px;
 }
 
 .icon-lg {
@@ -314,6 +396,10 @@ a[data-lightbox]:hover img {
     max-width: 600px;
     margin: auto;
 }
+.b-parallax {
+    background-attachment: scroll;
+    padding-bottom: 150px;
+}
 
 .cta-hero {
     margin-top: 22px;
@@ -326,7 +412,8 @@ a[data-lightbox]:hover img {
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: auto;
+    
 }
 
 .h1 {
@@ -349,7 +436,9 @@ h1, h4 {
     color: #333333;
 }
 
-
+.mg-bot-nul{
+    margin-bottom: 0;
+}
 p {
     font-size: 14px;
     line-height: 1.5em; /*espacement minimal*/
@@ -397,10 +486,6 @@ p {
     background-color: #F3976C;
 }
 
-.tc-white {
-    color: #F3976C;
-}
-
 .btn-atomic-tangerine {
     background:#F3976C;
     
@@ -423,13 +508,10 @@ p {
     color: #F3976C;
 }
 
-.ltc-atomic-tangerine:hover {
-    color: #c27956;
-}
 
 .icon-dark-slate-blue {
     color: #364577;
-    border-color: #364577;
+    
 }
 
 .bg-dots-bg {
@@ -447,6 +529,14 @@ p {
 .bg-presentation {
     background-image: url("img/image-de-presentation.jpg");
 }
+
+.fa-twitter {
+    
+    height: 50px;
+    font-weight: 300;
+    font-size: 2em;
+}
+
 footer div ul {
     display: flex;
     
@@ -457,212 +547,4 @@ footer div ul li {
 }
 
 
-@media (max-width: 1024px) {
-    .bloc {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .bloc.full-width-bloc,
-    .bloc-tile-2.full-width-bloc .container,
-    .bloc-tile-3.full-width-bloc .container,
-    .bloc-tile-4.full-width-bloc .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
 
-@media (max-width: 992px) and (min-width: 768px) {
-    .navbar .nav {
-        max-width: 80%
-    }
-    .nav-center.navbar .nav {
-        max-width: 100%
-    }
-}
-
-
-
-@media only screen and (min-width: 1024px) and (max-width: 1366px) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
-}
-
-
-
-@media (max-width: 767px) {
-    .body{
-        overflow-x: hidden;
-        position: relative;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    #disqus_thread {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .b-parallax {
-        background-attachment: scroll;
-    }
-    .navbar .nav {
-        padding-top: 0;
-        border-top: 1px solid rgba(0, 0, 0, .2);
-        float: none;
-    }
-    .navbar.row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .site-navigation {
-        position: inherit;
-        transform: none;
-        -webkit-transform: none;
-        -ms-transform: none;
-    }
-    .nav > li {
-        margin-top: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
-        background: rgba(0, 0, 0, .05);
-        text-align: left;
-        padding-left: 15px;
-        width: 100%;
-    }
-    .nav > li:hover {
-        background: rgba(0, 0, 0, .08);
-    }
-    .dropdown .dropdown a .caret {
-        float: none;
-        margin: 5px 0 0 10px;
-        border: 4px solid black;
-        border-bottom-color: transparent;
-        border-right-color: transparent;
-        border-left-color: transparent;
-    }
-    #hero-bloc .navbar .nav {
-        background: rgba(0, 0, 0, .8);
-    }
-    #hero-bloc .navbar .nav a {
-        color: rgba(255, 255, 255, .6);
-    }
-    .hero {
-        padding: 50px 0;
-    }
-    .hero-nav {
-        left: -1px;
-        right: -1px;
-    }
-    .navbar-collapse {
-        padding: 0;
-        overflow-x: hidden;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-    .navbar-brand img {
-        max-height: 40px;
-        width: auto;
-    }
-    
-    .nav-invert .navbar-toggle {
-        float: left;
-        margin-left: 10px;
-    }
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .bloc-xxl,
-    .bloc-xl{
-        padding: 40px 0;
-    }
-    
-    
-    .bloc-tile-2 .container,
-    .bloc-tile-3 .container,
-    .bloc-tile-4 .container,
-    .bloc-fill-screen .fil-top-edge,
-    .bloc-fill-screen .fil-bottom-edge {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .a-block {
-        padding: 0 10px;
-    }
-    .btn-dwn {
-        display: none;
-    }
-    .voffset {
-        margin-top: 5px;
-    }
-    .voffset-md {
-        margin-top: 20px;
-    }
-
-    form {
-        padding: 5px;
-    }
-    .close-lightbox {
-        display: inline-block;
-    }
-    .blocsapp-device-iphone5 {
-        background-size: 216px 425px;
-        padding-top: 60px;
-        width: 216px;
-        height: 425px;
-    }
-    .blocsapp-device-iphone5 img {
-        width: 180px;
-        height: 320px;
-    }
-}
-
-@media (max-width: 400px) {
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 767px) {
-    .bloc-mob-center-text {
-        text-align: center;
-    }
-}
-@media (min-width: 768px) {
-    .site-navigation {
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translate(0, -50%);
-        -webkit-transform: translateY(-50%);
-    }
-    .nav > li .dropdown-menu a,
-    .nav > li .dropdown-menu a:hover {
-        color: #484848;
-    }
-    .nav-invert .site-navigation {
-        left: 0;
-        right: 0;
-    }
-    .nav-center {
-        text-align: center;
-    }
-    
-    
-
-    .nav-center .site-navigation {
-        position: relative;
-        width: 100%;
-        right: 0;
-        margin-right: 0px;
-        margin-top: 20px;
-    }
-    .nav-center.mini-nav .navbar-toggle {
-        float: none;
-        margin: 10px auto 0;
-    }
-}
