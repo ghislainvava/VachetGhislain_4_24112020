@@ -6,6 +6,8 @@ template {
 
 a {
     background-color: transparent;
+    color: black;
+    text-decoration: none;
 
 }
 
@@ -16,9 +18,7 @@ abbr[title] {
 }
 
 b,
-strong {
-    font-weight: 700
-}
+
 
 dfn {
     font-style: italic
@@ -291,10 +291,11 @@ textarea {
 }
 
 a {
-    color:#364577;;
-    text-decoration: none
+    color:#333;
+    text-decoration: none;
 }
 
+black
 a:focus,
 a:hover {
     color: black;
