@@ -13,6 +13,7 @@ body {
 a:hover {
     cursor: pointer;
     text-decoration: none;
+   
 }
 strong {
     font-weight: inherit;
@@ -32,7 +33,7 @@ header{
 }
 
 header img {
-    width: 320x;
+    width: 320px;
     height: 60px;
     margin-left: 20px;
 }
@@ -82,13 +83,9 @@ header img {
     position: relative;
 }
 
-.bloc . {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .bloc-lg {
-    padding: 100px auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .bloc-gd {
     padding-top: 200px;
@@ -173,12 +170,11 @@ a[data-lightbox]:hover::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+   
 }
 
 a[data-lightbox]:hover img {
     opacity: 0.6;
-    -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
 }
 
