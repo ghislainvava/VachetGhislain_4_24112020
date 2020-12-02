@@ -1,72 +1,9 @@
 
-@font-face {
-    font-family: et-line;
-    src: url(fonts/et-line.eot);
-    src: url(fonts/et-line.eot?#iefix) format('embedded-opentype'), url(fonts/et-line.woff) format('woff'), url(fonts/et-line.ttf) format('truetype'), url(fonts/et-line.svg#et-line) format('svg');
-    font-weight: 400;
-    font-style: normal
-}
-
-.hg {
-    height: 100px;
-    width: 100px;
-}
-
-.et-icon-browser,
-.et-icon-edit,
-.et-icon-presentation
- {
-    font-family: et-line;
-    line-height: 1;
-    display: inline-block;
-}
-
-.et-icon-browser:before {
-    content: "\e00c"
-}
-.et-icon-presentation:before {
-    content: "\e00e"
-}
-.et-icon-edit:before {
-    content: "\e01c"
-}
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
-    src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),  url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
-   
-}
-
-.fa {
-    font:  30px/1 FontAwesome;
-    color: black;
-}
-
-.fa-3x {
-    font-size: 3em
-}
-
-.fa-instagram:before {
-    content: "\f16d"
-}
-
-.fa-dribbble:before {
-    content: "\f17d"
-}
-.fa-twitter:before {
-    content: "\f099"
-}
-.fa-facebook:before {
-    content: "\f09a"
-}
-
 body {
     margin: 0;
     padding: 0;
     background: #FFF;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+ 
 }
 .hors-ecran {
     position: absolute;
@@ -74,41 +11,47 @@ body {
  }
 
 a:hover {
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
 }
+strong {
+    font-weight:normal;
+  }
 
+header a {
+    margin-right: 50px;
+}
 a img{
     width: 270px;
     height: 270px;
 }
 
 header{
-    margin: 0 auto;
-    width: 1000px;
+    margin: 20px auto;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header img {
-    width: 386px;
-    height: 72px;
+    width: 322px;
+    height: 60px;
+    margin-left: 20px;
 }
 .header-contact{
-    margin-left: 50px;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .nave{
     display: flex;
     list-style: none;
+    float: right;
+    margin-top: 10px;
 }
 .nave li{
     margin-right: 30px;   
 }
 
-.nave li a{  
+.nave li a, header a{  
     color: #333333;
     font-size: 1.2em;
     text-decoration: none;
@@ -118,6 +61,12 @@ img{
     height: 72px;
     width: 72px;
 }
+
+.hg {
+    height: 100px;
+    width: 100px;
+}
+
 
 #citation{
     margin: 50px 20px 10px 20px;
@@ -134,7 +83,7 @@ img{
     position: relative;
 }
 
-.bloc .container {
+.bloc . {
     padding-left: 0;
     padding-right: 0;
 }
@@ -155,19 +104,8 @@ img{
     padding: 20px 50px;
 }
 
-.bg-center{
-    -webkit-background-size: auto;
-    -moz-background-size: auto;
-    -o-background-size: auto;
-    background-size: auto;
-}
-
 .bloc-mgtop{
     margin: 100px auto;
-}
-
-.bg-t-edge {
-    background: top no-repeat;
 }
 
 .bloc-bg-texture::before {
@@ -179,7 +117,6 @@ img{
     right: 0;
 }
 
-
 .texture-paper::before {
     background: url("img/texture-paper.png");
     background-size: 100px 100px;
@@ -187,106 +124,6 @@ img{
 
 .d-bloc {
     color: rgba(255, 255, 255, .7);
-}
-
-
-.row-no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-
-.row.row-no-gutters > [class^="col-"],
-.row.row-no-gutters > [class*=" col-"] {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-
-.navbar {
-    margin-bottom: 0;
-    z-index: 1;
-}
-
-#width-btn{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar-brand {
-    height: auto;
-    padding: 3px 15px;
-    font-size: 25px;
-    font-weight: normal;
-    font-weight: 600;
-    line-height: 44px;
-}
-
-.navbar-brand img {
-    max-height: 200px;
-    margin: 0 5px 0 0;
-    display: inline;
-}
-
-.navbar-brand img[src$=svg] {
-    min-width: 100px;
-}
-
-.nav-center .navbar-brand img {
-    margin: 0;
-}
-
-.navbar .nav {
-    padding-top: 2px;
-    margin-right: -16px;
-    float: right;
-    z-index: 1;
-}
-
-.nav > li {
-    float: left;
-    margin-top: 4px;
-    font-size: 16px;
-}
-
-.navbar-nav .open .dropdown-menu > li > a {
-    text-align: inherit;
-}
-
-.nav > li a:hover,
-.nav > li a:focus {
-    background: transparent;
-}
-
-.navbar-toggle {
-    margin: 10px 10px 0 0;
-    border: 0px;
-}
-
-.navbar-toggle:hover {
-    background: transparent;
-}
-
-.navbar-toggle .icon-bar {
-    background-color: rgba(0, 0, 0, .5);
-    width: 26px;
-}
-
-.nav-invert .navbar .nav {
-    float: left;
-}
-
-.nav > li > .dropdown a {
-    background: none;
-    display: block;
-    padding: 14px 15px;
-}
-
-nav .caret {
-    margin: 0 5px;
 }
 
 .mg-md {
@@ -299,29 +136,12 @@ nav .caret {
     margin-bottom: 40px;
 }
 
-.btn.pull-right {
-    margin: 0 0 5px 5px;
-}
-
-.btn-d,
-.btn-d:hover,
-.btn-d:focus {
-    color: #FFF;
-    background: rgba(0, 0, 0, .3);
-}
-
-button {
-    outline: none;
-}
-
 .btn-rd {
     border-radius: 40px;
+    border-color: transparent;
 }
 
-
-.icon-md {
-    
-    font-size: inherit;
+.icon-md {  
     font-size: 50px;
 }
 
@@ -333,31 +153,6 @@ button {
     text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
 }
 
-.form-control {
-    border-color: rgba(0, 0, 0, .1);
-    box-shadow: none;
-}
-
-.scrollToTop {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    opacity: 0;
-    z-index: 500;
-    transition: all .3s ease-in-out;
-}
-
-.scrollToTop span {
-    margin-top: 6px;
-}
-
-.showScrollTop {
-    font-size: 14px;
-    opacity: 1;
-}
-
 a[data-lightbox] {
     position: relative;
     display: block;
@@ -366,7 +161,7 @@ a[data-lightbox] {
 
 a[data-lightbox]:hover::before {
     content: "+";
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+    font-family: Helvetica, Arial;
     font-size: 32px;
     width: 50px;
     height: 50px;
@@ -388,35 +183,38 @@ a[data-lightbox]:hover img {
     animation-fill-mode: none;
 }
 
-.container {
-    max-width: 1000px;
-}
-
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto;
 }
+
 .b-parallax {
-    background-attachment: scroll;
+    background-attachment: fixed;
     padding-bottom: 150px;
+    padding-top: 150px;
+}
+
+.parallax2{
+    background-attachment: fixed;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .cta-hero {
     margin-top: 22px;
     color: black;
     text-transform: uppercase;
-    padding: 12px 28px 12px 28px;
+    padding: 12px 28px;
     font-size: 16px;
     font-weight: 700;
 }
 
 .social {
     max-width: 400px;
-    margin: auto;
-    
+    margin: auto;  
 }
 
-.h1 {
+.h1{
     font-size: 20px;
     font-family: "Open Sans";
 }
@@ -428,98 +226,37 @@ h2 {
 
 h3 {
     font-size: 15px;
-    font-weight: 700;
-   
-}
-
-h1, h4 {
-    color: #333333;
+    font-weight: 700;  
 }
 
 .mg-bot-nul{
     margin-bottom: 0;
 }
+
 p {
     font-size: 14px;
     line-height: 1.5em; /*espacement minimal*/
-}
-
-.med-width-whitespace {
-    max-width: 800px;
-    margin: auto auto auto auto;
-    box-shadow: 0px 0px 0px #000000;
-}
-
-.icons {
-    margin-bottom: 14px;
-    margin-top: 24px;
 }
 
 .white {
     color: #FFFFFF;
 }
 
-.portfolio-thumb {
-    margin-bottom: 24px;
-}
-
-.portfolio-row {
-    margin-bottom: 44px;
-    margin-top: 50px;
-}
-
-
 .black-background {
     background-color: rgba(165, 147, 99, 0.7);
     padding: 40px ;
 }
     
-
-
-
-.bold-link {
-    font-weight: 900;
-    text-decoration: underline;
-}
-
 .bgc-atomic-tangerine {
     background-color: #F3976C;
 }
 
 .btn-atomic-tangerine {
-    background:#F3976C;
-    
+    background:#F3976C;  
 }
-
-.btn-atomic-tangerin {
-    background: #F3976C;
-    color: black;
-}
-
-.ltc-white {
-    color: #FFFFFF;
-}
-
-.ltc-white:hover {
-    color: #cccccc;
-}
-
-.ltc-atomic-tangerine {
-    color: #F3976C;
-}
-
 
 .icon-dark-slate-blue {
-    color: #364577;
-    
-}
-
-.bg-dots-bg {
-    background-image: url("img/dots-bg.png");
-}
-
-.bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    color: #364577;  
 }
 
 .bg-banniere {
@@ -530,21 +267,130 @@ p {
     background-image: url("img/image-de-presentation.jpg");
 }
 
-.fa-twitter {
-    
-    height: 50px;
-    font-weight: 300;
-    font-size: 2em;
-}
-
 footer div ul {
-    display: flex;
-    
+    display: flex;   
 }
 
 footer div ul li {
     margin-right: 20px;
 }
 
+form {
+    margin: 50px auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #F3976C;
+    border-radius: 1em;
+  }
+  
+  form div + div {
+    margin-top: 1em;
+  }
+  
+  label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+  
+  input, textarea {
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #F3976C;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 5em;
+  }
+  
+  .button {
+    padding-left: 90px; 
+  }
+  
+  button {
+    margin-left: .5em;
+  }
+
+  button:hover{
+      font-size: large;
+  }
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+.fab {
+    font:  30px/1 FontAwesome;
+    color: black;
+}
+
+.fa-3x {
+    font-size: 3em
+}
 
 
+@font-face {
+    font-family: et-line;
+    src: url(fonts/et-line.eot);
+    src: url(fonts/et-line.eot?#iefix) format('embedded-opentype'), url(fonts/et-line.woff) format('woff'), url(fonts/et-line.ttf) format('truetype'), url(fonts/et-line.svg#et-line) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+
+
+.et-icon-browser,
+.et-icon-edit,
+.et-icon-presentation
+ {
+    font-family: et-line;
+    line-height: 1;
+    display: inline-block;
+}
+
+.et-icon-browser:before {
+    content: "\e00c"
+}
+.et-icon-presentation:before {
+    content: "\e00e"
+}
+.et-icon-edit:before {
+    content: "\e01c"
+}
+
+@media (max-width:768px) {
+    
+    
+    .bg-banniere {
+        background-image: url("img/la-chouette-agence-smart.jpg");
+    }
+    .b-parallax {
+        background-attachment: local;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+    .parallax2{
+        background-attachment: local;
+    }
+    .display-none {
+        display: none;
+    }
+    .bg-presentation {
+        background: none;
+    }
+    .texture-paper::before {
+        background: none;
+    }
+    .black-background{
+       background-color: rgba(243, 151, 108, 1);
+       
+       
+    }
+    .white{
+        color:black;
+    }
+}
