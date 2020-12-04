@@ -3,17 +3,44 @@ body {
     margin: 0;
     padding: 0;
     background: #FFF;
+    color: #333;
  
 }
 .hors-ecran {
     position: absolute;
     left: -99999rem;
  }
+.center-bloc{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-col{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.direction-col {
+    flex-direction: column;
+}
 
 a:hover {
     cursor: pointer;
+    font-size: x-large;
+}
+a{
     text-decoration: none;
-   
 }
 strong {
     font-weight: inherit;
@@ -67,16 +94,35 @@ header img {
     width: 100px;
 }
 
+.bloc-300-m{
+    min-width: 290px;
+    margin-right: 30px;
+}
+.bloc-300{
+    min-width: 300px;
+}
+.wrap {
+    flex-wrap: wrap;
+}
 
 #citation{
-    margin: 50px 20px 10px 20px;
     font-size: 20px;
     font-style: italic;
+    margin-bottom: 0;
+}
+
+.citation{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .pdg{
     font-size: 14px;
     font-weight: 300;
+    margin-top: 0;
 }
 
 .bloc {
@@ -122,6 +168,9 @@ header img {
     color: rgba(255, 255, 255, .7);
 }
 
+.mg-droit{
+    margin-right: 20px;
+}
 .mg-md {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -161,12 +210,11 @@ a[data-lightbox]:hover::before {
     font-size: 32px;
     width: 50px;
     height: 50px;
-    margin-left: -25px;
+    margin-left: 110px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
     font-weight: 100;
-    z-index: 1;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -197,17 +245,14 @@ a[data-lightbox]:hover img {
 
 .cta-hero {
     margin-top: 22px;
-    color: black;
+    color: #000000;
     text-transform: uppercase;
     padding: 12px 28px;
     font-size: 16px;
     font-weight: 700;
 }
 
-.social {
-    max-width: 400px;
-    margin: auto;  
-}
+
 
 .h1{
     font-size: 20px;
@@ -238,7 +283,7 @@ p {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(124, 77, 0, 0.7);
     padding: 40px ;
 }
     
@@ -272,7 +317,7 @@ footer div ul li {
 
 form {
     margin: 50px auto;
-    width: 350px;
+    width: 310px;
     padding: 1em;
     border: 1px solid #F3976C;
     border-radius: 1em;
@@ -280,7 +325,7 @@ form {
 
   .form-group{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
 
   }
   
@@ -290,7 +335,8 @@ form {
   
   label {
     display: inline-block;
-    width: 90px;
+    width: 180px;
+    margin-bottom: 5px;
     
 
   }
@@ -306,30 +352,23 @@ form {
     height: 8em;
   }
   
-  .button {
-    padding-left: 90px; 
-  }
-  
   button {
-    margin-left: .5em;
+    margin-left: 10px;
   }
 
   button:hover{
       font-size: large;
   }
- 
 
 @font-face {
     font-family: et-line;
-    src: url(fonts/et-line.eot);
-    src: url(fonts/et-line.eot?#iefix) format('embedded-opentype'), url(fonts/et-line.woff) format('woff'), url(fonts/et-line.ttf) format('truetype'), url(fonts/et-line.svg#et-line) format('svg');
+    src:  url(fonts/et-line.ttf) format('truetype');
     font-weight: 400;
     font-style: normal
 }
 
 
-
-.et-icon-browser,
+.et-icon-bser,
 .et-icon-edit,
 .et-icon-presentation
  {
@@ -338,7 +377,7 @@ form {
     display: inline-block;
 }
 
-.et-icon-browser:before {
+.et-icon-bser:before {
     content: "\e00c"
 }
 .et-icon-presentation:before {
@@ -347,6 +386,7 @@ form {
 .et-icon-edit:before {
     content: "\e01c"
 }
+
 
 @media (max-width:768px) {
     
@@ -375,9 +415,16 @@ form {
        background-color: rgba(243, 151, 108, 1);  
     }
     .white{
-        color:black;
+        color:#000000;
     }
     header img {
         margin-left: 0;
+    }
+
+    .services{
+        flex-direction: column;
+    }
+    .bloc-300-m{
+        margin: auto;
     }
 }
